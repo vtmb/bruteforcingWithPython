@@ -13,10 +13,15 @@ def extractZipFile(zipfile, password):
         return
 
 
-passfile = open("passwortliste.txt", "r")
+def main():
+    passfile = open("passwortliste.txt", "r")
 
-for line in passfile.readlines():
-    password = line.strip("\n")
-    guess = extractZipFile("passwortgeschuetzt.zip", password)
-    if guess:
-        print("password found: {0}".format(guess))
+    for line in passfile.readlines():
+        password = line.strip("\n")
+        guess = extractZipFile("passwortgeschuetzt.zip", password)
+        if guess:
+            print("password found: {0}".format(guess))
+
+
+if __name__ == "__main__":
+    main()
