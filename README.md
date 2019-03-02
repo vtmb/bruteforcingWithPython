@@ -1,15 +1,19 @@
 # bruteforcingWithPython
 example/test project that brute forces a zip password from a list
 
-in `setps.sh` are the steps to create a file and zip it to a password protected archive. After that the file is deleted
+`setps.sh` tut folgendes:
+* eine datei wird angelegt und ein text hinein geschrieben
+* jene datei wird mit zip komprimiert und mit einem Passwort versehen
+* die ursprüngliche Datei wird gelöscht
 
-in `setup.sh` the steps are run with predifined password (passwort)
+`main.py` tut folgendes:
+* `passwortliste.txt` wird zeilenweise durchgegangen
+* bei jedem Durchgang wird das komprimierte, passwortgeschützte Archiv geöffnet und die Zeile als Passwort eingegeben.
 
-to test run 
+um das Projekt zu testen, checke es aus und führe folgendes aus:
 
 ```bash
 ./setup.sh
 ./main.py
 ```
 
-the main.py reads from passwortliste.txt and tries every line as a password.
